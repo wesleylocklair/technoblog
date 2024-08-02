@@ -10,7 +10,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        document.location.replace('/api/recipes');
+        document.location.replace('/api/users');
         alert('Successfully Logged In!')
       } else {
         alert('Failed to log in');
