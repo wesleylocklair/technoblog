@@ -18,10 +18,8 @@ router.get('/', async (req, res) => {
             blogpostTotal.push(blogpost.dataValues);
         }
         console.log(blogpostTotal);
-        // res.json(recipeTotal);
-    //   res.render('login');
-    //handelbars call goes here
-        res.render('blogpost', {blogpostTotal});
+
+        res.render('users', {blogpostTotal});
     }
     catch (err) {
         console.log(err);
@@ -59,61 +57,6 @@ router.get('/createblogpost', (req, res) => {
 
   res.render('createblogpost');
 });
-
-
-
-
-
-
-
-
-router.get('/:id', async (req, res) => {
-    if (!req.session.logged_in) {
-        res.redirect('/api/users/login');
-        return;
-      }
-    try {
-        const blogpostTotal = [(await Blogpost.findByPk(req.params.id, {
-            include: [{ model: User }]
-        })).dataValues];
-        //this should work
-        console.log(blogpostTotal);
-        // res.json(recipeData);
-        res.render('blogpost', {blogpostTotal});
-        
-        //handelbars call goes here
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).json(err)
-    }
-});
-
-
-
-
-
-
-router.delete('/:id', async (req,res) => {
-    try{
-       
-        const deleteBlogpost = await Blogpost.destroy({
-            where: {
-                id: req.params.id
-            }
-        });
-        if(!deleteBlogpost){
-            res.status(404).json('Blogpost not found!');
-            return; //need to stop the call from reaching another res
-        }
-        res.json('Blogpost deleted!');
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
 
 
 

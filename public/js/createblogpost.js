@@ -14,7 +14,7 @@ const createblogpostFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/users');
+        document.location.replace('/api/users');
       } else {
         alert('Failed to create blogpost');
       }
