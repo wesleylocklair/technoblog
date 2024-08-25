@@ -7,7 +7,3 @@ router.use('/users', userRoutes);
 router.use('/blogpost', blogpostRoutes);
 
 module.exports = router;
-
-
-//the routes are api/users
-    //api//recipes

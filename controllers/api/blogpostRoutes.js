@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
         for (blogpost of blogpostData) {
             blogpostTotal.push(blogpost.dataValues);
         }
-        console.log(blogpostTotal);
+        // console.log(blogpostTotal);
 
         res.render('users', {blogpostTotal});
     }
