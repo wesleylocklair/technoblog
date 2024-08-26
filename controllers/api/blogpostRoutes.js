@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
         }
         // console.log(blogpostTotal);
 
-        res.render('users', {blogpostTotal});
+        res.render('blogpost', {blogpostTotal});
     }
     catch (err) {
         console.log(err);

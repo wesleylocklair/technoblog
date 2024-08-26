@@ -17,7 +17,7 @@ router.get('/', async (req,res) => {
         // res.json(userTotal);
         //handelbars call go here
         //res.redirect('/');
-        res.render('users', {userTotal});
+        res.render('blogpost', {userTotal});
     }
     catch (err) {
         console.log(err);
