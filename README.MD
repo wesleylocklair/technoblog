@@ -22,3 +22,7 @@ When you open up the app you will be routed towards our homescreen! You will nee
 ### https://technoblog-vk3n.onrender.com/
 
 ## Screenshots
+
+![alt text](<./public/images/Screenshot (21).png>)
+![alt text](<./public/images/Screenshot (23).png>)
+![alt text](<./public/images/Screenshot (20).png>)
