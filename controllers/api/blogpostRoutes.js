@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Blogpost, User } = require('../../models');
-//api//recipes
 
-//needs a get , get by id , a post recipe that requires a user
 router.get('/', async (req, res) => {
     if (!req.session.logged_in) {
         res.redirect('/api/users/login');

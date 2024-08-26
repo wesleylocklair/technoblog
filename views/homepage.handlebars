@@ -2,4 +2,13 @@
 <div><h1 class="has-text-warning">Welcome to TECHNOBLOG!</h1>
 <p>This website lets you create your very own blog posts! click on  the dashboard to get started!</p>
 </div>
-  
+  <h1> Blog Posts!</h1>
+<ul>
+  {{#each blogpostTotal as |blogpost|}}
+  <li class="content box maindisplay" id="blogpost">
+    <h5 class="has-text-warning">{{blogpost.title}}</h5>
+    <p class="has-text-warning">Description:</p>
+    <p>{{blogpost.description}}</p>
+</li>
+  {{/each}}
+  </ul>

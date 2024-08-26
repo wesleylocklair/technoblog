@@ -19,6 +19,6 @@ MDN - https://developer.mozilla.org/en-US/
 When you open up the app you will be routed towards our homescreen! You will need to create your own account on the log in page and then log into the app. From there you will be able to see the dashboard page and create your own recipe
 ## Render URL
 
-### https://the-flavor-direction.onrender.com
+### https://technoblog-vk3n.onrender.com/
 
 ## Screenshots
