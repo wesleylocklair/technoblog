@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
         for (blogpost of blogpostData) {
             blogpostTotal.push(blogpost.dataValues);
         }
-        // console.log(blogpostTotal);
 
         res.render('blogpost', {blogpostTotal});
     }
@@ -28,15 +27,9 @@ router.get('/', async (req, res) => {
 //it requires a user id, a title, a description, and a food type
 router.post('/createblogpost', async (req, res) => {
     try {
-        //sequelize function create
-        //req.body has the variables
-        console.log(JSON.stringify(req.body) + " this is where I am");
-        console.log(req.body);
-        console.log(typeof(req.body));
         const newBlogpost= await Blogpost.create(req.body);
-      
         res.json(newBlogpost);
-        //if there is a page for post successful, put the handelbars here
+    
     }
     catch (err) {
         console.log(err);
@@ -44,8 +37,6 @@ router.post('/createblogpost', async (req, res) => {
     }
 });
 
-//login info
-// {{!-- GET ROUTE --}}
 //api/users/login
 router.get('/createblogpost', (req, res) => {
   if (!req.session.logged_in) {

@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-
-//get all
 router.get('/', async (req,res) => {
     if (!req.session.logged_in) {
         res.redirect('/api/users/login');
@@ -14,9 +12,7 @@ router.get('/', async (req,res) => {
         for(user of userData){
             userTotal.push(user.dataValues);
         }
-        // res.json(userTotal);
-        //handelbars call go here
-        //res.redirect('/');
+
         res.render('blogpost', {userTotal});
     }
     catch (err) {
@@ -26,7 +22,6 @@ router.get('/', async (req,res) => {
 });
 
 
-//post, so creating a new user
 
 router.post('/create', async (req,res) => {
     try {
@@ -48,7 +43,6 @@ router.post('/login', async (req, res) => {
         const passCheck = searchUser.checkPassword(req.body.password);
         if ((searchUser.name === req.body.name)&&passCheck){
             //put the loginedIn = true here
-            console.log('here');
             req.session.logged_in = true;
             req.session.user_id = searchUser.id;
             req.session.save(() => {});
