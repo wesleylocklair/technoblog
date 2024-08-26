@@ -1,7 +1,8 @@
 # TECHNOBLOG
 
 ## Description
-this page is crated to be able to post blogposts and have people comment and interact with your posts. As of the momemnt I am having issues with the handlebars showing said blogposts. I will work on this in the future
+this page is crated to be able to post blogposts and have people comment and interact with your posts. You will be able to create your own login and password then be able to view past blogposts! Go over to your dashboard and create your own!
+
 
 ## User Story
 
