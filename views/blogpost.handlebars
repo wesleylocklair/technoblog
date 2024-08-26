@@ -1,11 +1,10 @@
    <a href="/api/blogpost/createblogpost" class="box">Create Blogpost</a>
 <h1 class="has-size-1">Your Blogposts!</h1>
-<ul>
+
   {{#each blogpostTotal as |blogpost|}}
-  <li class="content box maindisplay" id="blogpost">
+  <div class="content box maindisplay" id="blogpost">
     <h5 class="has-text-warning">{{blogpost.title}}</h5>
-    <p class="has-text-warning">Description:</p>
+    <p class="has-text-warning">{{blogpost.description}}</p>
     <p>{{blogpost.description}}</p>
-</li>
+</div>
   {{/each}}
-  </ul>
